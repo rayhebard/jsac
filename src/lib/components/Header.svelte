@@ -1,13 +1,15 @@
 <script>
   import { navigate } from '../../stores/page.js';
+  import mascot from '$lib/assets/images/Lon-E_Welcome_or_Info.png';
+  import logo from '$lib/assets/images/HeaderLogo01-1536x890.png';
 </script>
 
 <header class="header">
   <div class="header-container">
     <div class="logo-section">
       <a href="#/home" class="logo">
-        <img src="/Lon-E_Welcome_or_Info.png" alt="JSAC Mascot" class="header-mascot" />
-        <img src="/HeaderLogo01-1536x890.png" alt="Johnson STEM Activity Center" class="header-logo" />
+        <img src={mascot} alt="JSAC Mascot" class="header-mascot" />
+        <img src={logo} alt="Johnson STEM Activity Center" class="header-logo" />
       </a>
     </div>
     

@@ -1,4 +1,6 @@
 <script>
+  import mascot from '$lib/assets/images/Lon-E_Welcome_or_Info.png';
+  
   const partnerships = [
     { name: 'forever_young', img: 'https://johnsonstem.com/wp-content/uploads/2024/10/forever_young.webp' },
     { name: 'jrei', img: 'https://johnsonstem.com/wp-content/uploads/2024/10/jrei.webp' },
@@ -23,7 +25,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>About Us</h1>
-        <img src="/Lon-E_Welcome_or_Info.png" alt="About JSAC" class="page-header-mascot mascot-img" />
+        <img src={mascot} alt="About JSAC" class="page-header-mascot mascot-img" />
       </div>
       <p class="lead">We are passionate about helping the next generation become preeminent innovators!</p>
     </div>

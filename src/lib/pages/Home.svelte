@@ -1,5 +1,6 @@
 <script>
   import { navigate } from '../../stores/page.js';
+  import mascot from '$lib/assets/images/Lon-E_Thinking.png';
 </script>
 
 <div class="home-page">
@@ -29,7 +30,7 @@
       </div>
     </div>
     <div class="hero-mascot-right">
-      <img src="/Lon-E_Thinking.png" alt="Thinking Mascot" class="mascot-img" />
+      <img src={mascot} alt="Thinking Mascot" class="mascot-img" />
     </div>
   </section>
   
@@ -164,13 +165,6 @@
   
   .hero-content {
     max-width: 520px;
-  }
-  
-  .hero-mascot {
-    width: 180px;
-    height: 180px;
-    object-fit: contain;
-    margin-bottom: 1rem;
   }
   
   .hero-mascot-right {

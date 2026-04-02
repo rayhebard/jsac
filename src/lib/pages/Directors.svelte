@@ -1,4 +1,6 @@
 <script>
+  import mascot from '$lib/assets/images/Lon-E_Collaborate_or_Ask.png';
+  
   const boardMembers = [
     { name: 'Dr. Lonnie Johnson', role: 'Chairman of Board', img: 'https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/lonnie_johnson-circle-a08fc0a1cbd4f7e1504b2d8630a8b0b7-.webp', linkedin: 'https://www.linkedin.com/in/lonnie-g-johnson-aba0332a' },
     { name: 'Dr. Sylvia Bartley', role: 'Vice Chair', img: 'https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/sylvia_bartley-circle-d79665b83802812db3dd136fc520e2b6-.webp', linkedin: 'https://www.linkedin.com/in/sylvia-bartley/' },
@@ -32,7 +34,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>Board of Directors and Advisory Council</h1>
-        <img src="/Lon-E_Collaborate_or_Ask.png" alt="Board & Council" class="page-header-mascot mascot-img" />
+        <img src={mascot} alt="Board & Council" class="page-header-mascot mascot-img" />
       </div>
     </div>
   </section>

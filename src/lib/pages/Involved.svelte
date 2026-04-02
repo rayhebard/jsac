@@ -1,4 +1,6 @@
 <script>
+  import mascot from '$lib/assets/images/Lon-E_Collaborate_or_Ask.png';
+  
   const opportunities = [
     {
       title: 'Role Model / Mentoring',
@@ -28,7 +30,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>Volunteer Opportunities</h1>
-        <img src="/Lon-E_Collaborate_or_Ask.png" alt="Get Involved" class="page-header-mascot mascot-img" />
+        <img src={mascot} alt="Get Involved" class="page-header-mascot mascot-img" />
       </div>
       <p class="lead">Help us make a difference. Want to volunteer to help out at the Johnson STEM Activity Center? We'd love to have you.</p>
     </div>

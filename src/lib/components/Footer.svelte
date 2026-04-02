@@ -1,5 +1,6 @@
 <script>
   import { sidebarCollapsed } from '../../stores/page.js';
+  import mascot from '$lib/assets/images/Lon-E_Contact_or_Email.png';
   
   const currentYear = new Date().getFullYear();
   
@@ -24,7 +25,7 @@
       <div class="footer-brand">
         <div class="footer-logo">
           <div class="logo-icon">
-            <img src="/Lon-E_Contact_or_Email.png" alt="JSAC Mascot" class="mascot-img" />
+            <img src={mascot} alt="JSAC Mascot" class="mascot-img" />
           </div>
           <div class="logo-text">
             <span class="logo-title">Johnson STEM</span>

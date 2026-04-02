@@ -1,4 +1,6 @@
 <script>
+  import mascot from '$lib/assets/images/Lon-E_Navigation.png';
+  
   const tours = [
     {
       title: 'Basic Guided Tour',
@@ -33,7 +35,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>Tours, Venue Rentals and Speaker Requests</h1>
-        <img src="/Lon-E_Navigation.png" alt="Tours" class="page-header-mascot mascot-img" />
+        <img src={mascot} alt="Tours" class="page-header-mascot mascot-img" />
       </div>
     </div>
   </section>
