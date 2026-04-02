@@ -24,7 +24,7 @@
       <div class="footer-brand">
         <div class="footer-logo">
           <div class="logo-icon">
-            <img src="/src/assets/Lon-E_Contact_or_Email.png" alt="JSAC Mascot" class="mascot-img" />
+            <img src="/Lon-E_Contact_or_Email.png" alt="JSAC Mascot" class="mascot-img" />
           </div>
           <div class="logo-text">
             <span class="logo-title">Johnson STEM</span>

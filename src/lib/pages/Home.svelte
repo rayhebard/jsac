@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="hero-mascot-right">
-      <img src="/src/assets/Lon-E_Thinking.png" alt="Thinking Mascot" class="mascot-img" />
+      <img src="/Lon-E_Thinking.png" alt="Thinking Mascot" class="mascot-img" />
     </div>
   </section>
   

@@ -32,7 +32,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>Board of Directors and Advisory Council</h1>
-        <img src="/src/assets/Lon-E_Collaborate_or_Ask.png" alt="Board & Council" class="page-header-mascot mascot-img" />
+        <img src="/Lon-E_Collaborate_or_Ask.png" alt="Board & Council" class="page-header-mascot mascot-img" />
       </div>
     </div>
   </section>

@@ -23,7 +23,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>About Us</h1>
-        <img src="/src/assets/Lon-E_Welcome_or_Info.png" alt="About JSAC" class="page-header-mascot mascot-img" />
+        <img src="/Lon-E_Welcome_or_Info.png" alt="About JSAC" class="page-header-mascot mascot-img" />
       </div>
       <p class="lead">We are passionate about helping the next generation become preeminent innovators!</p>
     </div>

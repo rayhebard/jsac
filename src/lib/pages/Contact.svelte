@@ -17,7 +17,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>Contact Us</h1>
-        <img src="/src/assets/Lon-E_Contact_or_Email.png" alt="Contact" class="page-header-mascot mascot-img" />
+        <img src="/Lon-E_Contact_or_Email.png" alt="Contact" class="page-header-mascot mascot-img" />
       </div>
       <p class="lead">Let's get in touch. Your questions and insights matter to us.</p>
     </div>

@@ -48,7 +48,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>News & Media</h1>
-        <img src="/src/assets/Lon-E_success.png" alt="News & Media" class="page-header-mascot mascot-img" />
+        <img src="/Lon-E_success.png" alt="News & Media" class="page-header-mascot mascot-img" />
       </div>
     </div>
   </section>

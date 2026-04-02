@@ -6,8 +6,8 @@
   <div class="header-container">
     <div class="logo-section">
       <a href="#/home" class="logo">
-        <img src="/src/assets/Lon-E_Welcome_or_Info.png" alt="JSAC Mascot" class="header-mascot" />
-        <img src="/src/assets/HeaderLogo01-1536x890.png" alt="Johnson STEM Activity Center" class="header-logo" />
+        <img src="/Lon-E_Welcome_or_Info.png" alt="JSAC Mascot" class="header-mascot" />
+        <img src="/HeaderLogo01-1536x890.png" alt="Johnson STEM Activity Center" class="header-logo" />
       </a>
     </div>
     

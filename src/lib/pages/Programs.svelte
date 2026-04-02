@@ -36,7 +36,7 @@
     <div class="container">
       <div class="page-header-content">
         <h1>Our Programs</h1>
-        <img src="/src/assets/Lon-E_Thinking.png" alt="Programs" class="page-header-mascot mascot-img" />
+        <img src="/Lon-E_Thinking.png" alt="Programs" class="page-header-mascot mascot-img" />
       </div>
       <p class="lead">Explore the diverse range of programs and services we offer at Johnson STEM Activity Center. Each program is carefully designed to foster curiosity, creativity, and critical thinking, equipping students with the skills they need to thrive in STEM fields.</p>
     </div>
