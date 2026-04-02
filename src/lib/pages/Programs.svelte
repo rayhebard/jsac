@@ -1,5 +1,6 @@
 <script>
   import mascot from '$lib/assets/images/Lon-E_Thinking.png';
+  import { navigate } from '../../stores/page.js';
   
   const programs = [
     {
@@ -56,7 +57,7 @@
               <h2>{program.title}</h2>
               <p class="program-description">{program.description}</p>
               <p class="program-details">{program.details}</p>
-              <a href="https://johnsonstem.com/program-application/" target="_blank" class="btn btn-primary">{program.cta}</a>
+              <button class="btn btn-primary" on:click={() => navigate('application')}>{program.cta}</button>
             </div>
           </div>
         {/each}

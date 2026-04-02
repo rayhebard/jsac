@@ -1,5 +1,6 @@
 <script>
   import mascot from '$lib/assets/images/Lon-E_Navigation.png';
+  import { navigate } from '../../stores/page.js';
   
   const tours = [
     {
@@ -56,7 +57,7 @@
             <div class="tour-content">
               <h3>{tour.title}</h3>
               <p>{tour.description}</p>
-              <a href="https://johnsonstem.com/request-a-tour/" target="_blank" class="btn btn-primary">{tour.cta}</a>
+              <button class="btn btn-primary" on:click={() => navigate('tour-request')}>{tour.cta}</button>
             </div>
           </div>
         {/each}

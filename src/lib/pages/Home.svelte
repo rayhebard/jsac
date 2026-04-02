@@ -173,8 +173,8 @@
   }
   
   .hero-mascot-right img {
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
     object-fit: contain;
   }
   
@@ -411,10 +411,6 @@
     
     .hero-content {
       max-width: none;
-    }
-    
-    .hero-mascot {
-      display: none;
     }
     
     .hero-mascot-right {

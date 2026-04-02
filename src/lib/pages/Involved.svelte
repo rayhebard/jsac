@@ -1,4 +1,5 @@
 <script>
+  import { navigate } from '../../stores/page.js';
   import mascot from '$lib/assets/images/Lon-E_Collaborate_or_Ask.png';
   
   const opportunities = [
@@ -54,7 +55,7 @@
             {/each}
           </div>
           
-          <a href="https://johnsonstem.com/register-to-volunteer/" target="_blank" class="btn btn-primary">Register to Volunteer</a>
+          <button class="btn btn-primary" on:click={() => navigate('volunteer')}>Register to Volunteer</button>
         </div>
       </div>
     </div>

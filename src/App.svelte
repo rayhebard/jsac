@@ -9,9 +9,12 @@
   import Directors from './lib/pages/Directors.svelte';
   import Programs from './lib/pages/Programs.svelte';
   import Tours from './lib/pages/Tours.svelte';
+  import TourRequest from './lib/pages/TourRequest.svelte';
   import News from './lib/pages/News.svelte';
   import Involved from './lib/pages/Involved.svelte';
   import Contact from './lib/pages/Contact.svelte';
+  import ProgramApplication from './lib/pages/ProgramApplication.svelte';
+  import Volunteer from './lib/pages/Volunteer.svelte';
   
   onMount(() => {
     initRouter();
@@ -23,9 +26,12 @@
     directors: Directors,
     programs: Programs,
     tours: Tours,
+    'tour-request': TourRequest,
     news: News,
     involved: Involved,
-    contact: Contact
+    contact: Contact,
+    application: ProgramApplication,
+    volunteer: Volunteer
   };
 </script>
 
