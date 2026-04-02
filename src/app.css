@@ -5,19 +5,21 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #0D9488;
-  --color-primary-dark: #0F766E;
-  --color-primary-light: #14B8A6;
-  --color-secondary: #F59E0B;
-  --color-secondary-dark: #D97706;
+  --color-primary: #14B8A6;
+  --color-primary-dark: #0D9488;
+  --color-primary-darker: #0F766E;
+  --color-secondary: #F97316;
+  --color-secondary-dark: #EA580C;
   --color-accent: #8B5CF6;
   --color-accent-light: #A78BFA;
-  --color-dark: #0F172A;
-  --color-darker: #020617;
-  --color-light: #F8FAFC;
+  --color-accent-lavender: #C4B5FD;
+  --color-dark: #1E293B;
+  --color-darker: #0F172A;
+  --color-light: #F0FDFA;
   --color-lighter: #FFFFFF;
   --color-gray: #64748B;
   --color-gray-light: #94A3B8;
+  --color-gray-lavender: #E2E8F0;
   
   --font-display: 'Instrument Serif', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
@@ -26,10 +28,25 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  --page-header-padding: 2rem;
+  --page-header-mascot-size: 64px;
+  --page-header-title-size: clamp(1.75rem, 3vw, 2.5rem);
+  --page-padding-top: 1rem;
+}
+
+.page-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.mascot-img {
+  filter: contrast(1.1) brightness(1.1);
 }
 
 html {

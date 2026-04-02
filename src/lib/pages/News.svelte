@@ -46,7 +46,10 @@
 <div class="news-page">
   <section class="page-header">
     <div class="container">
-      <h1>News & Media</h1>
+      <div class="page-header-content">
+        <h1>News & Media</h1>
+        <img src="/src/assets/Lon-E_success.png" alt="News & Media" class="page-header-mascot mascot-img" />
+      </div>
     </div>
   </section>
   
@@ -87,6 +90,7 @@
       <div class="featured-video">
         <div class="video-wrapper-large">
           <iframe 
+            loading="lazy"
             src="https://www.youtube.com/embed/WdKyhct8Uvw" 
             title="JSAC STEMCast: Science, Spirituality, and Emotional Health With Dr. Sylvia Bartley"
             frameborder="0" 
@@ -104,6 +108,7 @@
           <div class="video-card">
             <div class="video-wrapper">
               <iframe 
+                loading="lazy"
                 src="https://www.youtube.com/embed/{podcast.videoId}" 
                 title={podcast.title}
                 frameborder="0" 
@@ -123,17 +128,37 @@
 
 <style>
   .news-page {
-    padding-top: 72px;
+    padding-top: var(--page-padding-top);
   }
   
   .page-header {
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-darker) 100%);
-    padding: 4rem 0;
+    padding: var(--page-header-padding) 0;
     text-align: center;
   }
   
+  .page-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .page-header-mascot {
+    width: var(--page-header-mascot-size);
+    height: var(--page-header-mascot-size);
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+  }
+  
   .page-header h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: var(--page-header-title-size);
     color: white;
   }
   

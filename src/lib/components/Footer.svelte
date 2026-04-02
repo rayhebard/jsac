@@ -1,4 +1,6 @@
 <script>
+  import { sidebarCollapsed } from '../../stores/page.js';
+  
   const currentYear = new Date().getFullYear();
   
   const quickLinks = [
@@ -16,17 +18,13 @@
   ];
 </script>
 
-<footer class="footer">
+<footer class="footer" class:sidebar-collapsed={$sidebarCollapsed}>
   <div class="footer-container">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
           <div class="logo-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
-              <path d="M12 20L20 12L28 20L20 28L12 20Z" fill="currentColor"/>
-              <circle cx="20" cy="20" r="6" fill="white"/>
-            </svg>
+            <img src="/src/assets/Lon-E_Contact_or_Email.png" alt="JSAC Mascot" class="mascot-img" />
           </div>
           <div class="logo-text">
             <span class="logo-title">Johnson STEM</span>
@@ -83,10 +81,6 @@
     
     <div class="footer-bottom">
       <p>&copy; {currentYear} Johnson STEM Activity Center. All Rights Reserved.</p>
-      <div class="footer-partners">
-        <span>Powered by</span>
-        <img src="https://johnsonstem.com/wp-content/mu-plugins/48in48-plugin//assets/48in48_logo_Official.png" alt="48in48" />
-      </div>
     </div>
   </div>
 </footer>
@@ -103,6 +97,12 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    margin-left: 260px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .footer.sidebar-collapsed .footer-container {
+    margin-left: 72px;
   }
   
   .footer-grid {
@@ -124,14 +124,14 @@
   }
   
   .logo-icon {
-    width: 36px;
-    height: 36px;
-    color: var(--color-primary);
+    width: 44px;
+    height: 44px;
   }
   
-  .logo-icon svg {
+  .logo-icon img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
   
   .logo-text {
@@ -249,30 +249,16 @@
   
   .footer-bottom {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .footer-bottom p {
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.6);
   }
-  
-  .footer-partners {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .footer-partners img {
-    height: 24px;
-    opacity: 0.6;
-  }
-  
+
   @media (max-width: 768px) {
     .footer-grid {
       grid-template-columns: 1fr;

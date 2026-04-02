@@ -1,6 +1,6 @@
-<script>
+<script lang="js">
   import { onMount } from 'svelte';
-  import { currentPage, initRouter } from './stores/page.js';
+  import { currentPage, initRouter, sidebarCollapsed } from './stores/page.js';
   import Header from './lib/components/Header.svelte';
   import Sidebar from './lib/components/Sidebar.svelte';
   import Footer from './lib/components/Footer.svelte';
@@ -35,7 +35,7 @@
   <div class="main-layout">
     <Sidebar />
     
-    <main class="main-content">
+    <main class="main-content" class:sidebar-collapsed={$sidebarCollapsed}>
       {#if pages[$currentPage]}
         <svelte:component this={pages[$currentPage]} />
       {:else}
@@ -57,14 +57,18 @@
   .main-layout {
     display: flex;
     flex: 1;
-    padding-top: 72px;
+    padding-top: 60px;
   }
   
   .main-content {
     flex: 1;
     margin-left: 260px;
-    min-height: calc(100vh - 72px);
+    min-height: calc(100vh - 60px);
     transition: margin-left 0.3s ease;
+  }
+  
+  .main-content.sidebar-collapsed {
+    margin-left: 72px;
   }
   
   @media (max-width: 900px) {

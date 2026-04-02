@@ -15,7 +15,10 @@
 <div class="contact-page">
   <section class="page-header">
     <div class="container">
-      <h1>Contact Us</h1>
+      <div class="page-header-content">
+        <h1>Contact Us</h1>
+        <img src="/src/assets/Lon-E_Contact_or_Email.png" alt="Contact" class="page-header-mascot mascot-img" />
+      </div>
       <p class="lead">Let's get in touch. Your questions and insights matter to us.</p>
     </div>
   </section>
@@ -135,6 +138,7 @@
     <div class="container">
       <div class="map-container">
         <iframe 
+          title="Google Maps - Johnson STEM Activity Center location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.547153576563!2d-84.3801862!3d33.7493832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa3716e8958ebf272!2sJohnson%20STEM%20Activity%20Center!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
           width="100%" 
           height="400" 
@@ -149,23 +153,43 @@
 
 <style>
   .contact-page {
-    padding-top: 72px;
+    padding-top: var(--page-padding-top);
   }
-  
+
+  .page-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .page-header {
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-darker) 100%);
-    padding: 4rem 0;
+    padding: var(--page-header-padding) 0;
     text-align: center;
   }
   
+  .page-header-mascot {
+    width: var(--page-header-mascot-size);
+    height: var(--page-header-mascot-size);
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+  }
+  
   .page-header h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: var(--page-header-title-size);
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   
   .page-header .lead {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
   }
   

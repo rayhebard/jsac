@@ -1,6 +1,7 @@
 import { writable } from 'svelte/store';
 
 export const currentPage = writable('home');
+export const sidebarCollapsed = writable(false);
 
 export function navigate(pageId) {
   currentPage.set(pageId);

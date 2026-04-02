@@ -28,6 +28,9 @@
         </button>
       </div>
     </div>
+    <div class="hero-mascot-right">
+      <img src="/src/assets/Lon-E_Thinking.png" alt="Thinking Mascot" class="mascot-img" />
+    </div>
   </section>
   
   <section class="stats-section">
@@ -59,7 +62,7 @@
       <div class="programs-grid">
         <div class="program-card">
           <div class="program-image">
-            <img src="https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/100sra2023carrollga9797-square-3dbc575374e6761d4eb2b9655a4f85bc-qtcy94nl1kb5.jpg" alt="Robotics" />
+            <img src="https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/100sra2023carrollga9797-square-3dbc575374e6761d4eb2b9655a4f85bc-qtcy94nl1kb5.jpg" alt="Robotics" loading="lazy" />
           </div>
           <div class="program-content">
             <h3>Robotics</h3>
@@ -70,7 +73,7 @@
         
         <div class="program-card">
           <div class="program-image">
-            <img src="https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/computer_lab-square-0182277c16d99e811aba2f10387a754d-85jmq602zrl7.png" alt="Coding and Game Design" />
+            <img src="https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/computer_lab-square-0182277c16d99e811aba2f10387a754d-85jmq602zrl7.png" alt="Coding and Game Design" loading="lazy" />
           </div>
           <div class="program-content">
             <h3>Coding & Game Design</h3>
@@ -81,7 +84,7 @@
         
         <div class="program-card">
           <div class="program-image">
-            <img src="https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/image_2024-10-05_083820945-square-176a59ef06c207b1603dc35e4058cabf-x1ovr750tmlz.png" alt="Virtual Reality" />
+            <img src="https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/image_2024-10-05_083820945-square-176a59ef06c207b1603dc35e4058cabf-x1ovr750tmlz.png" alt="Virtual Reality" loading="lazy" />
           </div>
           <div class="program-content">
             <h3>Virtual Reality</h3>
@@ -92,7 +95,7 @@
         
         <div class="program-card">
           <div class="program-image">
-            <img src="https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/scienceOnASphere-square-838d0c557e3deca4d93eaf6073291183-8tye3o5a9g2k.jpg" alt="Science on a Sphere" />
+            <img src="https://johnsonstem.com/wp-content/uploads/bb-plugin/cache/scienceOnASphere-square-838d0c557e3deca4d93eaf6073291183-8tye3o5a9g2k.jpg" alt="Science on a Sphere" loading="lazy" />
           </div>
           <div class="program-content">
             <h3>Science on a Sphere</h3>
@@ -120,7 +123,7 @@
 
 <style>
   .home-page {
-    padding-top: 72px;
+    padding-top: var(--page-padding-top);
   }
   
   .hero-banner {
@@ -163,6 +166,24 @@
     max-width: 520px;
   }
   
+  .hero-mascot {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-mascot-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-mascot-right img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
+  
   .hero-title {
     font-family: var(--font-display);
     font-size: clamp(2rem, 4vw, 3rem);
@@ -188,11 +209,7 @@
     gap: 1rem;
     flex-wrap: wrap;
   }
-  
-  .hero-visual {
-    position: relative;
-  }
-  
+
   .hero-card {
     border-radius: 1.5rem;
     overflow: hidden;
@@ -215,26 +232,30 @@
   }
   
   .stats-section {
-    background: var(--color-dark);
+    background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-darker) 100%);
     padding: 4rem 0;
+    border-top: 4px solid var(--color-accent);
   }
-  
+
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     text-align: center;
   }
-  
+
   .stat-card {
-    padding: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    border: 1px solid var(--color-accent-lavender);
   }
-  
+
   .stat-number {
     display: block;
     font-family: var(--font-display);
     font-size: clamp(2.5rem, 4vw, 3.5rem);
-    color: var(--color-secondary);
+    color: var(--color-primary);
     margin-bottom: 0.5rem;
   }
   
@@ -338,7 +359,8 @@
   
   .cta-section {
     padding: 6rem 0;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary-dark) 100%);
+    border-top: 4px solid var(--color-primary);
   }
   
   .cta-content {
@@ -397,17 +419,21 @@
       max-width: none;
     }
     
-    .hero-visual {
-      order: -1;
+    .hero-mascot {
+      display: none;
+    }
+    
+    .hero-mascot-right {
+      display: none;
     }
     
     .hero-card {
       transform: none;
     }
     
-  .hero-card a {
-    display: block;
-  }
+    .hero-card a {
+      display: block;
+    }
   
   .hero-card a img {
     width: 100%;

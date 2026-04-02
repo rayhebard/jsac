@@ -1,5 +1,5 @@
 <script>
-  import { currentPage, navigate } from '../../stores/page.js';
+  import { currentPage, navigate, sidebarCollapsed } from '../../stores/page.js';
   
   const navItems = [
     { id: 'home', label: 'Home', icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' },
@@ -12,11 +12,16 @@
     { id: 'contact', label: 'Contact', icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
   ];
   
-  let collapsed = false;
+  let collapsed = $sidebarCollapsed;
+  
+  function toggleSidebar() {
+    collapsed = !collapsed;
+    sidebarCollapsed.set(collapsed);
+  }
 </script>
 
-<aside class="sidebar" class:collapsed>
-  <div class="sidebar-toggle" on:click={() => collapsed = !collapsed}>
+<aside class="sidebar" class:collapsed={$sidebarCollapsed}>
+  <div class="sidebar-toggle" on:click={toggleSidebar} role="button" tabindex="0" on:keypress={toggleSidebar}>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       {#if collapsed}
         <path d="M9 5l7 7-7 7"/>
@@ -61,7 +66,7 @@
   .sidebar {
     position: fixed;
     left: 0;
-    top: 72px;
+    top: 60px;
     bottom: 0;
     width: 260px;
     background: white;
@@ -161,8 +166,8 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
-    background: var(--color-secondary);
-    color: var(--color-dark);
+    background: var(--color-accent-lavender);
+    color: var(--color-darker);
     font-weight: 600;
     font-size: 0.875rem;
     border-radius: 0.5rem;
@@ -171,7 +176,8 @@
   }
   
   .sidebar-donate:hover {
-    background: var(--color-secondary-dark);
+    background: var(--color-accent);
+    color: white;
   }
   
   .sidebar-donate svg {

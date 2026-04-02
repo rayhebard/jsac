@@ -34,7 +34,10 @@
 <div class="programs-page">
   <section class="page-header">
     <div class="container">
-      <h1>Our Programs</h1>
+      <div class="page-header-content">
+        <h1>Our Programs</h1>
+        <img src="/src/assets/Lon-E_Thinking.png" alt="Programs" class="page-header-mascot mascot-img" />
+      </div>
       <p class="lead">Explore the diverse range of programs and services we offer at Johnson STEM Activity Center. Each program is carefully designed to foster curiosity, creativity, and critical thinking, equipping students with the skills they need to thrive in STEM fields.</p>
     </div>
   </section>
@@ -45,7 +48,7 @@
         {#each programs as program, index}
           <div class="program-item" class:reverse={index % 2 === 1}>
             <div class="program-image">
-              <img src={program.image} alt={program.title} />
+              <img src={program.image} alt={program.title} loading="lazy" />
             </div>
             <div class="program-content">
               <h2>{program.title}</h2>
@@ -62,23 +65,43 @@
 
 <style>
   .programs-page {
-    padding-top: 72px;
+    padding-top: var(--page-padding-top);
   }
   
   .page-header {
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-darker) 100%);
-    padding: 4rem 0;
+    padding: var(--page-header-padding) 0;
     text-align: center;
   }
   
+  .page-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .page-header-mascot {
+    width: var(--page-header-mascot-size);
+    height: var(--page-header-mascot-size);
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+  }
+  
   .page-header h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: var(--page-header-title-size);
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   
   .page-header .lead {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
     max-width: 700px;
     margin: 0 auto;

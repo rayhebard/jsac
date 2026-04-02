@@ -31,7 +31,10 @@
 <div class="tours-page">
   <section class="page-header">
     <div class="container">
-      <h1>Tours, Venue Rentals and Speaker Requests</h1>
+      <div class="page-header-content">
+        <h1>Tours, Venue Rentals and Speaker Requests</h1>
+        <img src="/src/assets/Lon-E_Navigation.png" alt="Tours" class="page-header-mascot mascot-img" />
+      </div>
     </div>
   </section>
   
@@ -115,17 +118,37 @@
 
 <style>
   .tours-page {
-    padding-top: 72px;
+    padding-top: var(--page-padding-top);
   }
-  
+
+  .page-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .page-header {
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-darker) 100%);
-    padding: 4rem 0;
+    padding: var(--page-header-padding) 0;
     text-align: center;
   }
   
+  .page-header-mascot {
+    width: var(--page-header-mascot-size);
+    height: var(--page-header-mascot-size);
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+  }
+  
   .page-header h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: var(--page-header-title-size);
     color: white;
   }
   

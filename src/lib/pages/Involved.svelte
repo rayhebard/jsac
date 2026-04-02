@@ -26,7 +26,10 @@
 <div class="involved-page">
   <section class="page-header">
     <div class="container">
-      <h1>Volunteer Opportunities</h1>
+      <div class="page-header-content">
+        <h1>Volunteer Opportunities</h1>
+        <img src="/src/assets/Lon-E_Collaborate_or_Ask.png" alt="Get Involved" class="page-header-mascot mascot-img" />
+      </div>
       <p class="lead">Help us make a difference. Want to volunteer to help out at the Johnson STEM Activity Center? We'd love to have you.</p>
     </div>
   </section>
@@ -68,23 +71,43 @@
 
 <style>
   .involved-page {
-    padding-top: 72px;
+    padding-top: var(--page-padding-top);
   }
-  
+
+  .page-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .page-header {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    padding: 4rem 0;
+    padding: var(--page-header-padding) 0;
     text-align: center;
   }
   
+  .page-header-mascot {
+    width: var(--page-header-mascot-size);
+    height: var(--page-header-mascot-size);
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+  }
+  
   .page-header h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: var(--page-header-title-size);
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   
   .page-header .lead {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     margin: 0 auto;
