@@ -34,7 +34,7 @@
   .header-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,13 +51,13 @@
   }
 
   .header-mascot {
-    height: 36px;
+    height: 112px;
     width: auto;
     object-fit: contain;
   }
   
   .header-logo {
-    height: 44px;
+    height: 112px;
     width: auto;
     object-fit: contain;
   }
@@ -89,10 +89,10 @@
   
   @media (max-width: 900px) {
     .header-mascot {
-      height: 28px;
+      height: 72px;
     }
     .header-logo {
-      height: 36px;
+      height: 72px;
     }
   }
 </style>

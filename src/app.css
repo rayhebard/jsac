@@ -27,7 +27,7 @@
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
   --page-header-padding: 2rem;
-  --page-header-mascot-size: 64px;
+  --page-header-mascot-size: 112px;
   --page-header-title-size: clamp(1.75rem, 3vw, 2.5rem);
   --page-padding-top: 1rem;
 }

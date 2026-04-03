@@ -63,13 +63,13 @@
   .main-layout {
     display: flex;
     flex: 1;
-    padding-top: 60px;
+    padding-top: 140px;
   }
   
   .main-content {
     flex: 1;
     margin-left: 260px;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 140px);
     transition: margin-left 0.3s ease;
   }
   

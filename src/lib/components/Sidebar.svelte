@@ -68,7 +68,7 @@
   .sidebar {
     position: fixed;
     left: 0;
-    top: 60px;
+    top: 140px;
     bottom: 0;
     width: 260px;
     background: white;
