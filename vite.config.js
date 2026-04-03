@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [tailwindcss(), svelte()],
   server: {
     host: true,
-    port: 5173
+    port: 5177
   },
   base: '/jsac/',
   resolve: {
